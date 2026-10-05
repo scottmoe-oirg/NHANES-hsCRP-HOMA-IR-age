@@ -193,7 +193,7 @@ Citation metadata will also be provided in `CITATION.cff`.
 
 ## License
 
-Licensing information for the repository will be provided in `LICENSE`.
+The computational code in this repository is distributed under the MIT License; see `LICENSE`.
 
 The NHANES source data are distributed separately by the National Center for
 Health Statistics and remain subject to their applicable terms and
