@@ -49,7 +49,7 @@ they are not intended to imply that other software versions are incompatible.
 ## Run
 
 ```bash
-python run_analysis.py --data-dir /path/to/xpt/files --mode full_audit
+python3 run_analysis.py --data-dir /path/to/xpt/files --mode full_audit
 ```
 
 Modes:
