@@ -1,0 +1,4 @@
+model,F,df_num,df_den,p,quadratic_component_p
+Linear age interaction,3.9265929251132383,1,40,0.05443011566033565,
+Quadratic age interaction,3.432107307059891,2,40,0.042108809457851205,0.08568602014054892
+Natural cubic spline age interaction (4 df),3.0909483258101464,4,40,0.026190634720828127,

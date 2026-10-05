@@ -1,0 +1,34 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Raw NHANES data
+data_raw/
+
+# LaTeX temporary files
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.toc
+*.synctex.gz
+
+# Miscellaneous temporary files
+*.tmp
+*~
+
+# Private/internal project materials
+archive/
+workspace_tree.txt
+NHANES_Study1_Statistical_Modeling_Sensitivity_QA.*
+
+# Derived participant-level analytic/QC data
+hscrp_homair_reproducible_analysis/outputs/qc/analytic_dataset_key_variables.csv

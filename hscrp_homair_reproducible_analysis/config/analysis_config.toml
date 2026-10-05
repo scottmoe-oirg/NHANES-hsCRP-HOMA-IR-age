@@ -1,0 +1,49 @@
+[study]
+name = "hsCRP-HOMA-IR NHANES study"
+minimum_age = 20
+hba1c_upper_exclusive = 5.7
+fasting_weight_zero_tolerance = 1.0e-12
+
+[age_groups]
+young_max = 39
+midlife_max = 54
+labels = ["20-39", "40-54", "55+"]
+
+[variables]
+exposure = "HOMA_IR"
+outcome = "log_hs_CRP"
+primary_covariates = ["LBXGH", "waist", "AGE", "is_male", "Non_HDL"]
+
+[survey]
+strata = "stratum_u"
+psu = "psu_u"
+combined_weight = "analysis_weight"
+# Period-specific nuisance slopes are part of the locked combined-period primary model.
+period_specific_nuisance = true
+
+[period_2015_2016]
+label = "2015-16"
+prefix = ""
+suffix = "_I.xpt"
+fasting_weight = "WTSAF2YR"
+duration_years = 2.0
+
+[period_2017_2020]
+label = "2017-Mar2020"
+prefix = "P_"
+suffix = ".xpt"
+fasting_weight = "WTSAFPRP"
+duration_years = 3.2
+
+[combined]
+total_years = 5.2
+
+[validation]
+expected_n = 3079
+expected_design_df = 40
+expected_interaction_F = 5.6863452144
+expected_interaction_p = 0.00670739084
+expected_slope_20_39 = 0.02662879194
+expected_slope_40_54 = 0.05112736866
+expected_slope_55_plus = -0.01890406625
+absolute_tolerance = 1.0e-8

@@ -1,0 +1,172 @@
+
+============================================================
+R CROSS-SOFTWARE VALIDATION: PRIMARY NHANES ANALYSIS
+============================================================
+
+R version:      R version 4.6.1 (2026-06-24)
+survey version: 4.5
+haven version:  2.5.5
+
+PARTICIPANT FLOW
+                               stage remaining_n excluded_at_stage
+ NHANES 2015-March 2020 participants       25531                NA
+                           Age >= 20       14951             10580
+                         DIQ010 == 2       12286              2665
+                        HbA1c < 5.7%        7217              5069
+ Qualifying fasting-subsample weight        3239              3978
+   Valid fasting glucose and insulin        3185                54
+         Positive HOMA-IR and hs-CRP        3182                 3
+         Complete primary covariates        3079               103
+
+DESIGN CHECKS
+Analytic n: 3079
+Survey df:  40
+
+PRIMARY MODEL COEFFICIENTS
+                                Estimate   Std. Error    t value     Pr(>|t|)
+(Intercept)                -4.3175365746 0.8320396093 -5.1890998 2.576396e-05
+HOMA_IR                     0.0266287919 0.0112938792  2.3578074 2.687264e-02
+age_group40-54             -0.0178628358 0.0965757040 -0.1849620 8.548130e-01
+age_group55+                0.2837627568 0.1722402608  1.6474822 1.124913e-01
+period2017-Mar2020          1.2355507027 1.1233110629  1.0999186 2.822785e-01
+LBXGH                       0.1212328271 0.1328668013  0.9124388 3.706128e-01
+waist                       0.0406170653 0.0032002644 12.6917842 3.883252e-12
+AGE                        -0.0048882143 0.0044704724 -1.0934447 2.850526e-01
+is_male                    -0.5252907360 0.0697819095 -7.5276062 9.109445e-08
+Non_HDL                     0.0028683644 0.0006539622  4.3861320 1.978676e-04
+HOMA_IR:age_group40-54      0.0244985767 0.0184879085  1.3251135 1.976116e-01
+HOMA_IR:age_group55+       -0.0455328582 0.0167375584 -2.7204003 1.193443e-02
+period2017-Mar2020:LBXGH    0.0341461592 0.1984399772  0.1720730 8.648229e-01
+period2017-Mar2020:waist   -0.0122436439 0.0037053782 -3.3042899 2.980529e-03
+period2017-Mar2020:AGE     -0.0042717632 0.0043248199 -0.9877320 3.331380e-01
+period2017-Mar2020:is_male  0.0985331198 0.0904909634  1.0888725 2.870237e-01
+period2017-Mar2020:Non_HDL  0.0004493283 0.0009666939  0.4648093 6.462575e-01
+
+JOINT HOMA-IR x AGE-GROUP TEST
+R survey::regTermTest() default:
+Wald test for HOMA_IR:age_group
+ in svyglm(formula = primary_formula, design = primary_design, family = gaussian())
+F =  5.686345  on  2  and  24  df: p= 0.0095174 
+
+Same Wald F evaluated with prespecified survey design df:
+F(2,40) = 5.686345214430, p = 0.006707390836
+
+AGE-SPECIFIC HOMA-IR SLOPES
+ age_group             beta              SE            CI_low         CI_high
+     20-39  0.0266287919393 0.0112938791875  0.00380301065232 0.0494545732262
+     40-54  0.0511273686601 0.0187443775612  0.01324356846449 0.0890111688557
+       55+ -0.0189040662478 0.0160406111852 -0.05132335075979 0.0135152182641
+              t df                p
+  2.35780740144 40 0.02336148341901
+  2.72761090589 40 0.00942854863819
+ -1.17851284029 40 0.24555562442901
+
+SOFTWARE-DEFAULT DF DIAGNOSTIC
+regTermTest default p = 0.009517388138 (its printed denominator df may differ)
+Design-df p          = 0.006707390836 using denominator df = 40
+
+PYTHON-vs-R LOCKED VALIDATION
+                  quantity         expected         R_obtained
+                Analytic n 3079.00000000000  3.07900000000e+03
+                 Survey df   40.00000000000  4.00000000000e+01
+             Interaction F    5.68634521440  5.68634521443e+00
+ Interaction p (design df)    0.00670739084  6.70739083596e-03
+               Slope 20-39    0.02662879194  2.66287919393e-02
+              20-39 CI low    0.00380301065  3.80301065232e-03
+             20-39 CI high    0.04945457323  4.94545732262e-02
+                   20-39 p    0.02336148342  2.33614834190e-02
+               Slope 40-54    0.05112736866  5.11273686601e-02
+              40-54 CI low    0.01324356846  1.32435684645e-02
+             40-54 CI high    0.08901116886  8.90111688557e-02
+                   40-54 p    0.00942854864  9.42854863819e-03
+                 Slope 55+   -0.01890406625 -1.89040662478e-02
+                55+ CI low   -0.05132335076 -5.13233507598e-02
+               55+ CI high    0.01351521826  1.35152182641e-02
+                     55+ p    0.24555562443  2.45555624429e-01
+    abs_difference tolerance status
+ 0.00000000000e+00     0e+00   PASS
+ 0.00000000000e+00     0e+00   PASS
+ 3.04449798705e-11     1e-06   PASS
+ 4.04065409604e-12     1e-06   PASS
+ 7.27362614583e-13     1e-06   PASS
+ 2.32033229436e-12     1e-06   PASS
+ 3.77505665616e-12     1e-06   PASS
+ 9.89510556826e-13     1e-06   PASS
+ 1.19661225373e-13     1e-06   PASS
+ 4.49321829743e-12     1e-06   PASS
+ 4.25390278558e-12     1e-06   PASS
+ 1.80760094393e-12     1e-06   PASS
+ 2.16153137056e-12     1e-06   PASS
+ 2.08701111948e-13     1e-06   PASS
+ 4.11435815972e-12     1e-06   PASS
+ 9.86627446409e-13     1e-06   PASS
+
+============================================================
+SECONDARY VALIDATION 1: CRUDE MODEL
+============================================================
+Wald test for HOMA_IR:age_group
+ in svyglm(formula = log_hs_CRP ~ HOMA_IR * age_group + period, design = primary_design, 
+    family = gaussian())
+F =  1.707  on  2  and  34  df: p= 0.19659 
+
+Same Wald F with survey design df:
+F(2,40) = 1.706999845682, p = 0.194358639336
+
+AGE-SPECIFIC CRUDE HOMA-IR SLOPES
+ age_group           beta              SE          CI_low        CI_high
+     20-39 0.130797959113 0.0192646961689 0.0918625557840 0.169733362441
+     40-54 0.155340311404 0.0282683065761 0.0982079326578 0.212472690151
+       55+ 0.101729189969 0.0250005219550 0.0512012503012 0.152257129637
+             t df                 p
+ 6.78951580477 40 3.68696247638e-08
+ 5.49521107627 40 2.41747096410e-06
+ 4.06908264365 40 2.15830936613e-04
+
+CRUDE MODEL LOCKED VALIDATION
+                        quantity   expected     R_obtained    abs_difference
+             Crude interaction F 1.70699985 1.706999845682 4.31817070989e-09
+ Crude interaction p (design df) 0.19435864 0.194358639336 6.63997523631e-10
+               Crude slope 20-39 0.13079796 0.130797959113 8.87295958929e-10
+               Crude slope 40-54 0.15534031 0.155340311404 1.40448802588e-09
+                 Crude slope 55+ 0.10172919 0.101729189969 3.07845832159e-11
+ tolerance status
+     1e-06   PASS
+     1e-06   PASS
+     1e-06   PASS
+     1e-06   PASS
+     1e-06   PASS
+
+============================================================
+SECONDARY VALIDATION 2: LOG-HOMA SENSITIVITY
+============================================================
+Wald test for HOMA_IR:age_group
+ in svyglm(formula = log_hs_CRP ~ HOMA_IR * age_group + period * 
+    (LBXGH + waist + AGE + is_male + Non_HDL), design = log_design, 
+    family = gaussian())
+F =  1.85654  on  2  and  24  df: p= 0.17796 
+
+Same Wald F with survey design df:
+F(2,40) = 1.856539542722, p = 0.169422799578
+
+AGE-SPECIFIC log(HOMA-IR) SLOPES (diagnostic)
+ age_group              beta              SE            CI_low        CI_high
+     20-39  0.12708100375117 0.0662438396555 -0.00680279033586 0.260964797838
+     40-54  0.17221663643774 0.0881100161373 -0.00586034881686 0.350293621692
+       55+ -0.00457803845529 0.0733963851734 -0.15291766626674 0.143761589356
+                t df               p
+  1.9183822135332 40 0.0622198295395
+  1.9545636692356 40 0.0576493047940
+ -0.0623741679441 40 0.9505755087814
+
+LOG-HOMA SENSITIVITY LOCKED VALIDATION
+                           quantity expected     R_obtained    abs_difference
+             Log-HOMA interaction F    1.860 1.856539542722 0.003460457277795
+ Log-HOMA interaction p (design df)    0.169 0.169422799578 0.000422799577889
+ tolerance status
+     5e-03   PASS
+     5e-04   PASS
+
+============================================================
+FULL CROSS-SOFTWARE VALIDATION: PASS
+Primary + crude + log-HOMA sensitivity reproduced.
+============================================================

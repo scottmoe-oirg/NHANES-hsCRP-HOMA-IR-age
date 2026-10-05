@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+message: "If you use this research or its computational materials, please cite it using the metadata below."
+
+title: "Insulin Resistance and Systemic Inflammation Below the HbA1c Prediabetes Threshold: Age-Dependent Associations in U.S. Adults, NHANES 2015–March 2020"
+
+type: software
+
+authors:
+  - family-names: "Moerschbacher"
+    given-names: "Scott"
+    affiliation: "Open Inquiry Research Group"
+
+  - family-names: "Baker"
+    given-names: "Janice"
+    affiliation: "Open Inquiry Research Group; Department of Sociology, University of Nevada, Reno"
+
+abstract: >-
+  Reproducible computational materials and manuscript for a survey-weighted
+  analysis of the association between HOMA-IR and high-sensitivity C-reactive
+  protein among U.S. adults without diagnosed diabetes and with HbA1c below
+  5.7%, using NHANES 2015–March 2020 data. The study evaluates modification
+  of the adjusted HOMA-IR–hs-CRP association across adulthood.
+
+keywords:
+  - "NHANES"
+  - "HOMA-IR"
+  - "hs-CRP"
+  - "insulin resistance"
+  - "systemic inflammation"
+  - "HbA1c"
+  - "metabolic epidemiology"
+  - "survey-weighted regression"
+  - "reproducible research"
+
+license: MIT

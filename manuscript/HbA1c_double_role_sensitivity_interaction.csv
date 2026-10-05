@@ -1,0 +1,3 @@
+model,n,F,df_num,df_den,p
+Primary: adjusted for continuous HbA1c,3254,5.686345214326909,2,40,0.006707390836500058
+"Sensitivity: HbA1c restriction only, no continuous HbA1c adjustment",3254,5.574191836529439,2,40,0.007320850561782452

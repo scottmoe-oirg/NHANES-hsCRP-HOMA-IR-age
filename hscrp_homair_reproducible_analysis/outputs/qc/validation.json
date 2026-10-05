@@ -1,0 +1,30 @@
+{
+  "observed": {
+    "n": 3079,
+    "design_df": 40,
+    "interaction_F": 5.686345214418757,
+    "interaction_p": 0.006707390836020383,
+    "slope_20_39": 0.026628791939304897,
+    "slope_40_54": 0.05112736866016267,
+    "slope_55_plus": -0.01890406624774066
+  },
+  "expected": {
+    "n": 3079,
+    "design_df": 40,
+    "interaction_F": 5.6863452144,
+    "interaction_p": 0.00670739084,
+    "slope_20_39": 0.02662879194,
+    "slope_40_54": 0.05112736866,
+    "slope_55_plus": -0.01890406625
+  },
+  "checks": {
+    "n": true,
+    "design_df": true,
+    "interaction_F": true,
+    "interaction_p": true,
+    "slope_20_39": true,
+    "slope_40_54": true,
+    "slope_55_plus": true
+  },
+  "all_passed": true
+}

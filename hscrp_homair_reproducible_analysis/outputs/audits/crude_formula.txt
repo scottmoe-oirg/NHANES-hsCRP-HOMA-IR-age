@@ -1,0 +1,1 @@
+log_hs_CRP ~ HOMA_IR * C(age_group) + C(period)

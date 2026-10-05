@@ -1,0 +1,9 @@
+stage,remaining_n,excluded_at_stage
+NHANES 2015-March 2020 participants,25531,
+Age >= 20,14951,10580.0
+DIQ010 == 2,12286,2665.0
+HbA1c < 5.7%,7217,5069.0
+Qualifying fasting-subsample weight,3239,3978.0
+Valid fasting glucose and insulin,3185,54.0
+Positive HOMA-IR and hs-CRP,3182,3.0
+Complete primary covariates,3079,103.0

@@ -1,0 +1,220 @@
+
+% Requires in the main manuscript preamble:
+% \usepackage{booktabs}
+% \usepackage{pdflscape}
+% \usepackage{longtable}
+% \usepackage{array}
+
+\begin{landscape}
+
+% If this is the first supplementary table, place these two lines
+% immediately before the table (or set them once at the start of the supplement):
+% \setcounter{table}{0}
+% \renewcommand{\thetable}{S\arabic{table}}
+
+\small
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.15}
+\setlength{\LTcapwidth}{0.95\linewidth}
+
+\begin{longtable}{
+    >{\raggedright\arraybackslash}p{3.15cm}
+    >{\centering\arraybackslash}p{1.35cm}
+    >{\raggedright\arraybackslash}p{3.15cm}
+    >{\raggedright\arraybackslash}p{6.15cm}
+    >{\raggedright\arraybackslash}p{6.0cm}
+}
+
+\caption{Sensitivity and robustness analyses of age modification in the HOMA-IR–hs-CRP association, NHANES 2015–March 2020
+}
+\label{tab:S1}\\
+
+\toprule
+\textbf{Analysis} &
+\textbf{$n$} &
+\textbf{Interaction / test} &
+\textbf{Age-specific HOMA-IR coefficients} &
+\textbf{Interpretation} \\
+\midrule
+\endfirsthead
+
+\multicolumn{5}{l}{\textit{Supplementary Table \thetable\ continued}}\\[2pt]
+\toprule
+\textbf{Analysis} &
+\textbf{$n$} &
+\textbf{Interaction / test} &
+\textbf{Age-specific HOMA-IR coefficients} &
+\textbf{Interpretation} \\
+\midrule
+\endhead
+
+\midrule
+\multicolumn{5}{r}{\textit{Continued on next page}}\\
+\endfoot
+
+\bottomrule
+\endlastfoot
+
+\textbf{Primary model} &
+3,079 &
+$F(2,40)=5.69$, $p=0.00671$ &
+20--39: 0.0266 (0.0038, 0.0495)\newline
+40--54: 0.0511 (0.0132, 0.0890)\newline
+55+: $-0.0189$ ($-0.0513$, 0.0135) &
+Reference specification. \\
+
+\addlinespace
+
+Raw hs-CRP outcome &
+3,079 &
+$F(2,40)=3.96$, $p=0.0269$ &
+20--39: 0.127 (0.018, 0.235)\newline
+40--54: 0.160 ($-0.056$, 0.377)\newline
+55+: $-0.109$ ($-0.282$, 0.064) &
+Age interaction retained on the original outcome scale. \\
+
+\addlinespace
+
+Log-transformed HOMA-IR &
+3,079 &
+$F(2,40)=1.86$, $p=0.169$ &
+20--39: 0.127 ($-0.0068$, 0.261)\newline
+40--54: 0.172 ($-0.0059$, 0.350)\newline
+55+: $-0.0046$ ($-0.153$, 0.144) &
+Directional pattern remained, but formal age-interaction evidence was attenuated. \\
+
+\addlinespace
+
+Raw hs-CRP + log HOMA-IR &
+3,079 &
+$F(2,40)=1.43$, $p=0.251$ &
+20--39: 0.475 ($-0.146$, 1.096)\newline
+40--54: 0.338 ($-0.621$, 1.296)\newline
+55+: $-0.165$ ($-0.937$, 0.607) &
+Formal interaction not detected. \\
+
+\addlinespace
+
+No continuous HbA1c adjustment &
+3,079 &
+$F(2,40)=5.57$, $p=0.00732$ &
+20--39: 0.0284\newline
+40--54: 0.0521\newline
+55+: $-0.0171$ &
+Essentially unchanged from the primary model. \\
+
+\addlinespace
+
+BMI substituted for waist circumference\textsuperscript{a} &
+3,072 &
+$F(2,40)=4.91$, $p=0.0124$ &
+20--39: 0.0304 (0.0058, 0.0550)\newline
+40--54: 0.0601 (0.0234, 0.0968)\newline
+55+: $-0.0085$ ($-0.0468$, 0.0298) &
+Age pattern retained under alternative adiposity adjustment. \\
+
+\addlinespace
+
+hs-CRP $\leq10$ mg/L, log outcome &
+2,895 &
+$F(2,40)=2.58$, $p=0.0883$ &
+20--39: 0.0249 (0.0054, 0.0443)\newline
+40--54: 0.0478 (0.0118, 0.0838)\newline
+55+: $-0.0042$ ($-0.0367$, 0.0283) &
+Age-specific pattern remained, but formal interaction evidence weakened. \\
+
+\addlinespace
+
+hs-CRP $\leq10$ mg/L, raw outcome &
+2,895 &
+$F(2,40)=4.03$, $p=0.0255$ &
+20--39: 0.0824 (0.0300, 0.1348)\newline
+40--54: 0.0905 (0.0108, 0.1702)\newline
+55+: $-0.0304$ ($-0.1077$, 0.0469) &
+Interaction retained after restricting inflammatory extremes. \\
+
+\addlinespace
+
+HbA1c $<6.0\%$ &
+4,018 &
+$F(2,40)=5.74$, $p=0.00644$ &
+20--39: 0.0185 ($-0.0034$, 0.0404)\newline
+40--54: 0.0448 (0.0070, 0.0826)\newline
+55+: $-0.0190$ ($-0.0457$, 0.0078) &
+Relaxing eligibility did not remove age modification. \\
+
+\addlinespace
+
+HbA1c $<6.5\%$ &
+4,492 &
+$F(2,40)=5.58$, $p=0.00731$ &
+20--39: 0.0120 ($-0.0101$, 0.0341)\newline
+40--54: 0.0371 (0.0046, 0.0696)\newline
+55+: $-0.0290$ ($-0.0568$, $-0.0011$) &
+Age modification persisted with a broader glycemic range. \\
+
+\addlinespace
+
+No HbA1c cutoff\textsuperscript{b} &
+4,639 &
+$F(2,40)=5.74$, $p=0.00643$ &
+20--39: 0.0115 ($-0.0081$, 0.0311)\newline
+40--54: 0.0349 (0.0065, 0.0633)\newline
+55+: $-0.0212$ ($-0.0456$, 0.0032) &
+Simple HbA1c-threshold selection did not explain older attenuation. \\
+
+\addlinespace
+
+Continuous linear age interaction &
+3,079 &
+$F(1,40)=3.93$, $p=0.0544$ &
+Not represented by three age-group coefficients. &
+Borderline evidence under a strictly linear age-varying slope. \\
+
+\addlinespace
+
+Continuous quadratic age interaction &
+3,079 &
+$F(2,40)=3.43$, $p=0.0421$ &
+Not represented by three age-group coefficients. &
+Evidence of nonlinear age modification; quadratic component alone $p=0.0857$. \\
+
+\addlinespace
+
+Natural cubic spline age interaction &
+3,079 &
+$F(4,40)=3.09$, $p=0.0262$ &
+Not represented by three age-group coefficients. &
+Flexible continuous-age model supported age-dependent variation. \\
+
+\addlinespace
+
+Leave-one-survey-cluster-out\textsuperscript{c} &
+3,023--3,063 &
+79 refits &
+Not applicable. &
+Interaction $F$ ranged from 3.59 to 7.66 and $p$ from 0.00157 to 0.0369.
+No single masked stratum--PSU cluster eliminated the interaction. \\
+
+\end{longtable}
+
+\vspace{-0.5em}
+\begin{minipage}{0.97\linewidth}
+\footnotesize
+\textit{Notes:} Values in parentheses are 95\% confidence intervals.
+For models with $\ln$(hs-CRP) as the outcome, coefficients are on the log outcome scale;
+raw-outcome coefficients are in hs-CRP units.
+All analyses used the NHANES complex survey design with duration-adjusted fasting-subsample weights,
+masked variance strata, and masked variance units.
+Sensitivity analyses were performed to evaluate robustness and were not treated as additional primary hypothesis tests.
+
+\textsuperscript{a} To isolate the adiposity specification itself, the BMI analysis was restricted
+to participants in the primary analytic sample who also had nonmissing BMI.
+
+\textsuperscript{b} Participants with diagnosed diabetes remained excluded; only the HbA1c
+eligibility threshold was removed.
+
+\textsuperscript{c} Each refit deleted one unique masked stratum--PSU combination from the locked primary model.
+\end{minipage}
+
+\end{landscape}
