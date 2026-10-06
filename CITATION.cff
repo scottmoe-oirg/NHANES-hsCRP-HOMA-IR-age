@@ -33,3 +33,6 @@ keywords:
   - "reproducible research"
 
 license: MIT
+version: "1.0.0"
+doi: "10.5281/zenodo.23176026"
+date-released: "2026-10-06"

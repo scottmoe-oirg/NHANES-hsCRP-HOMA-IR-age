@@ -9,6 +9,17 @@ validation for:
 **Insulin Resistance and Systemic Inflammation Below the HbA1c Prediabetes
 Threshold: Age-Dependent Associations in U.S. Adults, NHANES 2015–March 2020**
 
+## Archival release
+
+The version 1.0.0 scholarly and computational release is permanently archived
+on Zenodo:
+
+**DOI:** 10.5281/zenodo.23176026
+
+The Zenodo record includes the manuscript, supplementary material, reproducible
+Python analysis pipeline, aggregate computational outputs, and independent R
+cross-software validation.
+
 The study examines the association between insulin resistance, estimated using
 the Homeostatic Model Assessment of Insulin Resistance (HOMA-IR), and systemic
 inflammation, measured using high-sensitivity C-reactive protein (hs-CRP), among
